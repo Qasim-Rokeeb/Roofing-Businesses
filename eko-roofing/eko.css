@@ -1,0 +1,410 @@
+:root {
+  --color-eko-bg: #030712;
+  --color-eko-surface: #0b1528;
+  --color-eko-surface-light: #15243e;
+  --color-eko-primary: #D4AF37; /* Warm Gold */
+  --color-eko-primary-hover: #AA841A;
+  --color-eko-text-main: #F3F4F6;
+  --color-eko-text-muted: #9CA3AF;
+  --color-eko-border: rgba(212, 175, 55, 0.15);
+  --color-eko-border-light: rgba(255, 255, 255, 0.08);
+}
+
+body.eko-theme {
+  background-color: var(--color-eko-bg);
+  color: var(--color-eko-text-main);
+  font-family: var(--font-display);
+}
+
+.eko-header {
+  border-bottom: 1px solid var(--color-eko-border-light);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(3, 7, 18, 0.8);
+}
+
+.eko-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.eko-logo {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-eko-text-main);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.eko-logo span {
+  color: var(--color-eko-primary);
+}
+
+.eko-menu {
+  display: none;
+  gap: 32px;
+}
+
+@media (min-width: 768px) {
+  .eko-menu {
+    display: flex;
+  }
+}
+
+.eko-menu a {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--color-eko-text-muted);
+  transition: var(--transition-fast);
+}
+
+.eko-menu a:hover {
+  color: var(--color-eko-primary);
+}
+
+.eko-btn-primary {
+  background: var(--color-eko-primary);
+  color: #030712;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: var(--radius-sm);
+  transition: var(--transition-smooth);
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.25);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.eko-btn-primary:hover {
+  background: var(--color-eko-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(212, 175, 55, 0.35);
+}
+
+.eko-btn-outline {
+  border: 1px solid var(--color-eko-border);
+  color: var(--color-eko-primary);
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: var(--radius-sm);
+  transition: var(--transition-smooth);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.eko-btn-outline:hover {
+  background: rgba(212, 175, 55, 0.08);
+  border-color: var(--color-eko-primary);
+  transform: translateY(-2px);
+}
+
+/* Hero Section */
+.eko-hero {
+  padding: 100px 0 140px 0;
+  background: radial-gradient(circle at top right, rgba(212, 175, 55, 0.08), transparent 60%);
+  position: relative;
+  overflow: hidden;
+}
+
+.eko-hero-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.eko-hero-badge {
+  border: 1px solid var(--color-eko-border);
+  color: var(--color-eko-primary);
+  background: rgba(212, 175, 55, 0.05);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  display: inline-block;
+  margin-bottom: 24px;
+}
+
+.eko-hero h1 {
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  line-height: 1.15;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .eko-hero h1 {
+    font-size: 4.5rem;
+  }
+}
+
+.eko-hero p {
+  color: var(--color-eko-text-muted);
+  font-size: 1.15rem;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.eko-hero-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+/* Features/Stats Section */
+.eko-stats {
+  padding: 60px 0;
+  border-top: 1px solid var(--color-eko-border-light);
+  border-bottom: 1px solid var(--color-eko-border-light);
+  background: rgba(11, 21, 40, 0.3);
+}
+
+.eko-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+@media (min-width: 1024px) {
+  .eko-stat-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.eko-stat-card {
+  text-align: center;
+}
+
+.eko-stat-card h3 {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  color: var(--color-eko-primary);
+  margin-bottom: 8px;
+}
+
+.eko-stat-card p {
+  color: var(--color-eko-text-muted);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Services section */
+.eko-section {
+  padding: 100px 0;
+}
+
+.eko-section-title {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 60px auto;
+}
+
+.eko-section-title h2 {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+.eko-section-title p {
+  color: var(--color-eko-text-muted);
+}
+
+.eko-service-card {
+  background: var(--color-eko-surface);
+  border: 1px solid var(--color-eko-border-light);
+  border-radius: var(--radius-md);
+  padding: 40px;
+  transition: var(--transition-smooth);
+}
+
+.eko-service-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--color-eko-primary);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.eko-service-icon {
+  width: 56px;
+  height: 56px;
+  background: rgba(212, 175, 55, 0.08);
+  border-radius: var(--radius-md);
+  color: var(--color-eko-primary);
+  margin-bottom: 24px;
+}
+
+.eko-service-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.eko-service-card p {
+  color: var(--color-eko-text-muted);
+  font-size: 0.95rem;
+}
+
+/* Estimator section */
+.eko-estimator-box {
+  background: linear-gradient(135deg, var(--color-eko-surface), #050c18);
+  border: 1px solid var(--color-eko-border);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.eko-form-group {
+  margin-bottom: 24px;
+}
+
+.eko-form-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: var(--color-eko-text-main);
+}
+
+.eko-select, .eko-input {
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: var(--radius-sm);
+  background: var(--color-eko-bg);
+  border: 1px solid var(--color-eko-border-light);
+  color: white;
+  transition: var(--transition-fast);
+}
+
+.eko-select:focus, .eko-input:focus {
+  border-color: var(--color-eko-primary);
+}
+
+.eko-slider-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.eko-slider {
+  flex-grow: 1;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--color-eko-surface-light);
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.eko-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-eko-primary);
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+  transition: var(--transition-fast);
+}
+
+.eko-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.eko-est-result {
+  background: rgba(212, 175, 55, 0.05);
+  border: 1px dashed var(--color-eko-border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  text-align: center;
+  margin-top: 32px;
+}
+
+.eko-est-price {
+  font-family: var(--font-serif);
+  font-size: 2.25rem;
+  color: var(--color-eko-primary);
+  font-weight: 700;
+  margin: 12px 0;
+}
+
+/* Reviews / Testimonials */
+.eko-testimonial-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--color-eko-border-light);
+  border-radius: var(--radius-md);
+  padding: 32px;
+}
+
+.eko-reviewer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.eko-avatar {
+  width: 48px;
+  height: 48px;
+  background: var(--color-eko-surface-light);
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  color: var(--color-eko-primary);
+}
+
+.eko-reviewer-info h4 {
+  font-size: 1rem;
+}
+
+.eko-reviewer-info p {
+  font-size: 0.8rem;
+  color: var(--color-eko-text-muted);
+}
+
+/* Footer & Maps Info */
+.eko-footer {
+  background: #02040a;
+  border-top: 1px solid var(--color-eko-border-light);
+  padding: 80px 0 40px 0;
+  color: var(--color-eko-text-muted);
+}
+
+.eko-footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  margin-bottom: 60px;
+}
+
+@media (min-width: 768px) {
+  .eko-footer-grid {
+    grid-template-columns: 1.5fr 1fr 1fr;
+  }
+}
+
+.eko-footer h4 {
+  color: white;
+  margin-bottom: 24px;
+  font-family: var(--font-serif);
+}
+
+.eko-footer-info p {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.eko-footer-info svg {
+  color: var(--color-eko-primary);
+  width: 18px;
+  height: 18px;
+}
